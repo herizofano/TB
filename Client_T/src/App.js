@@ -17,6 +17,14 @@ import Monthly from "view/monthly";
 import Breakdown from "view/breakdown";
 import Admin from "view/admin";
 import Performance from "view/performance";
+import Username from "components/Username";
+import PageNotFound from "components/PageNotFound";
+import Password from "components/Password";
+import Profile from "components/Profile";
+import Recovery from "components/Recovery";
+import Register from "components/Register";
+import Reset from "components/Reset";
+
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -40,6 +48,15 @@ function App() {
               <Route path="/breakdown" element={ <Breakdown />} />
               <Route path="/admin" element={ <Admin />} />
               <Route path="/performances" element={ <Performance />} />
+              <Route path="/username" element={ <Username />} />
+              <Route path="/profile" element={ <Profile />} />
+              <Route path="/register" element={ <Register />} />
+              <Route path="/recovery" element={ <Recovery />} />
+              <Route path="/password" element={ <Password />} />
+              <Route path="*" element={ <PageNotFound />} />
+              <Route path="/reset" element={ <Reset />} />
+
+
 
 
 

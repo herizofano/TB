@@ -11,3 +11,8 @@ body,
     width: 100%;
     font-family: "Inter", sans-serif;
 }
+
+body{
+    background: #dcdce6;
+    background-image: url('./assets/Background.png');
+}
