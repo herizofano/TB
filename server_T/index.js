@@ -12,6 +12,7 @@ import clientRoutes from './routes/clients.js';
 import generalRoutes from './routes/generals.js';
 import managementRoutes from './routes/managements.js';
 import campagnesRoutes from './routes/campagnes.js';
+import router from './routes/route';
 
 
 //data import
@@ -44,6 +45,7 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", campagnesRoutes);
+app.use("/api", router);
 
 
 /** MONGOOSE SETUP */
