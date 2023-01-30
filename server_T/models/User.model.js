@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export const UserSchema = new mongoose.Schema({
+export const UseSchema = new mongoose.Schema({
     username : {
         type: String,
         required : [true, "Please provide unique Username"],
@@ -23,4 +23,4 @@ export const UserSchema = new mongoose.Schema({
     profile: { type: String}
 });
 
-export default mongoose.model.Users || mongoose.model('User', UserSchema);
+export default mongoose.model.Users || mongoose.model('Use', UseSchema);
