@@ -6,14 +6,14 @@ import { resetPasswordValidation } from '../helper/validate'
 import { resetPassword } from '../helper/helper'
 import { useAuthStore } from '../store/store';
 import { useNavigate, Navigate } from 'react-router-dom';
-import useFetch from '../hooks/fetch.hook.js/fetch.hook'
+import useFetch from '../hooks/fetch.hook'
 
 import styles from '../styles/Username.module.css';
 
 const Reset = () => {
     const { username } = useAuthStore(state => state.auth);
     const navigate = useNavigate();
-    const [{ isLoading, apiData, status, serverError }] = useFetch('createResetSession')
+    const [{ isLoading, status, serverError }] = useFetch('createResetSession')
   
     const formik = useFormik({
       initialValues : {

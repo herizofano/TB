@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { useFormik } from 'formik';
 import { profileValidation } from '../helper/validate';
 import convertToBase64 from '../helper/convert';
-import useFetch from '../hooks/fetch.hook.js/fetch.hook';
+import useFetch from '../hooks/fetch.hook';
 import { updateUser } from '../helper/helper'
 import { useNavigate } from 'react-router-dom'
 
