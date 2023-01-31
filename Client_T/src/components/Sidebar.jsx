@@ -44,11 +44,11 @@ const navItems = [
     icon: null,
   },
   {
-    text: "Products",
+    text: "Offres",
     icon: <ShoppingCartOutlined />,
   },
   {
-    text: "Customers",
+    text: "Investisseurs",
     icon: <Groups2Outlined />,
   },
   {

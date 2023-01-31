@@ -37,7 +37,9 @@ function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <Routes>
-              <Route path="/" element= { <Navigate to = "/" replace /> }/>
+              
+            <Route element= { <Layout />}>
+              <Route path="/" element= { <Navigate to = "/dashboard" replace /> }/>
               <Route path="/username" element={ <Username />} />
               <Route path="/profile" element={ <AuthorizeUser><Profile /></AuthorizeUser>} />
               <Route path="/register" element={ <Register />} />
@@ -45,11 +47,10 @@ function App() {
               <Route path="/password" element={ <ProtectRoute><Password /></ProtectRoute>} />
               <Route path="*" element={ <PageNotFound />} />
               <Route path="/reset" element={ <Reset />} />
-            <Route element= { <Layout />}>
               
               <Route path="/dashboard" element= { <Dashboard /> }/>
-              <Route path="/products" element= { <Products /> }/>
-              <Route path="/customers" element= { <Customers /> }/>
+              <Route path="/offres" element= { <Products /> }/>
+              <Route path="/investisseurs" element= { <Customers /> }/>
               <Route path="/transactions" element= { <Transactions /> }/>
               <Route path="/carte" element= { <Geography /> }/>
               <Route path="/overview" element={ <Overview />} />
