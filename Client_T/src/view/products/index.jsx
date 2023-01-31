@@ -52,7 +52,7 @@ const Product = ({
           variant="h5"
           color={theme.palette.secondary[400]}
         >
-          ${Number(price).toFixed(2)}
+          MGA{Number(price).toFixed(2)}
         </Typography>
         <Rating value={rating} readOnly />
         <Typography variant="body2">{description}</Typography>
@@ -64,6 +64,13 @@ const Product = ({
           onClick={() => setIsExpanded(!isExpanded)}
         >
           Details
+        </Button>
+        <Button
+          variant="default"
+          size="small"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          Ajouter
         </Button>
         <Collapse
           in={isExpanded}
@@ -96,7 +103,7 @@ const Products = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="PRODUITS" subtitle="Voici la liste de vos produits" />
+      <Header title="OFFRES" subtitle="Meilleurs Offres d' investissements" />
       {data || !isLoading ? (
         <Box
           mt="20px"
