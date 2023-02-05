@@ -6,12 +6,13 @@ import morgan from "morgan";
 import cors from "cors";
 
 import dotenv from "dotenv";
-
+import authRoutes from "./routes/auth.js";
+import userRoutes from "./routes/users.js";
 import clientRoutes from "./routes/clients.js";
 import generalRoutes from "./routes/generals.js";
 import managementRoutes from "./routes/managements.js";
 import campagnesRoutes from "./routes/campagnes.js";
-import router from "./routes/route.js";
+//import router from "./routes/route.js";
 
 //data import
 
@@ -43,12 +44,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
 /** ROUTES */
-
+app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", campagnesRoutes);
-app.use("/api", router);
+//app.use("/api", router);
 
 /** MONGOOSE SETUP */
 

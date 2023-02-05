@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 
 /** auth middleware */
-export default async function Auth(req, res, next){
+export const Auth = async(req, res, next) => {
     try {
         
         // access authorize header to validate request
