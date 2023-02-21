@@ -19,7 +19,7 @@ import Performance from "view/performance";
 import LoginPage from "view/loginPage";
 import HomePage from "view/homePage";
 import ProfilePage from "view/profilePage";
-import Username from "view/username";
+/* import Username from "view/username";
 import PageNotFound from "view/pagenotfound";
 import Password from "view/password";
 import Profile from "view/profile";
@@ -27,7 +27,7 @@ import Recovery from "view/recovery";
 import Register from "view/register";
 import Reset from "view/reset";
 import { AuthorizeUser } from "middlware/auth";
-import { ProtectRoute } from "middlware/auth";
+import { ProtectRoute } from "middlware/auth"; */
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -40,7 +40,8 @@ function App() {
           <CssBaseline />
           <Routes>
             
-              <Route path="/" element={<LoginPage />} />
+              <Route path="/auth/login" element={<LoginPage />} />
+              <Route path="/auth/register" element={<LoginPage />} />
               <Route
                 path="/home"
                 element={isAuth ? <HomePage /> : <Navigate to="/" />}

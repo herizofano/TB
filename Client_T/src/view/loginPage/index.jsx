@@ -25,7 +25,7 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
-          Bienvenue sur la plateforme "Miara Miezaka" BonMarche.MG 2.0!
+          Bienvenue sur la plateforme "MANONGA" BonMarche.MG 2.0!
         </Typography>
         <Form />
       </Box>
